@@ -11,6 +11,8 @@
 @optional
 - (void)deserializer:(nonnull FEMDeserializer *)deserializer willMapObjectFromRepresentation:(nonnull id)representation mapping:(nonnull FEMMapping *)mapping;
 - (void)deserializer:(nonnull FEMDeserializer *)deserializer didMapObject:(nonnull id)object fromRepresentation:(nonnull id)representation mapping:(nonnull FEMMapping *)mapping;
+- (void)deserializer:(nonnull FEMDeserializer *)deserializer didFillObject:(nonnull id)object fromRepresentation:(nonnull id)representation mapping:(nonnull FEMMapping *)mapping; // perform just short after filling object, but before register object (and didMapObject)
+
 
 - (void)deserializer:(nonnull FEMDeserializer *)deserializer willMapCollectionFromRepresentation:(nonnull NSArray *)representation mapping:(nonnull FEMMapping *)mapping;
 - (void)deserializer:(nonnull FEMDeserializer *)deserializer didMapCollection:(nonnull NSArray *)collection fromRepresentation:(nonnull NSArray *)representation mapping:(nonnull FEMMapping *)mapping;
